@@ -1,0 +1,7 @@
+name: "Neural Style transfer github action"
+description: "Applies neural style transfer on image and generate result as artifact"
+author: "Akshay Ashok"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"

@@ -1,7 +1,7 @@
-# GitHub Action for text summarization
+# GitHub Action for Neural Style Transfer on Images
 
-[![Actions Status](https://github.com/Akshay090/github-action-style-transfer/workflows/Lint/badge.svg)](https://github.com/Akshay090/github-action-style-transfer/actions)
-[![Actions Status](https://github.com/Akshay090/github-action-style-transfer/workflows/Integration%20Test/badge.svg)](https://github.com/Akshay090/github-action-style-transfer/actions)
+[![Actions Status](https://github.com/Akshay090/github-action-neural-style-transfer/workflows/Lint/badge.svg)](https://github.com/Akshay090/github-action-neural-style-transfer/actions)
+[![Actions Status](https://github.com/Akshay090/github-action-neural-style-transfer/workflows/Integration%20Test/badge.svg)](https://github.com/Akshay090/github-action-neural-style-transfer/actions)
 
 ## Usage
 
@@ -18,9 +18,13 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Run action
-      uses: Akshay090/github-action-style-transfer@master
+      uses: Akshay090/github-action-neural-style-transfer@master
       with:
-        path: path/to/textFile.txt
+        path: tests/sample_image.jpg
+    - uses: actions/upload-artifact@v1
+      with:
+        name: styled_image
+        path: styled_output
 ```
 
 ### Inputs
@@ -29,32 +33,3 @@ jobs:
 |------------------------------------------------------|-----------------------------------------------|
 | `path`  | Path to text file to be summarized    |
 
-### Outputs
-
-| Output                                             | Description                                        |
-|------------------------------------------------------|-----------------------------------------------|
-| `summary`  | The summary of the text File which was processed    |
-
-## Examples
-
-### Using outputs
-
-The outputs can be used whith other actions in workflow as given below, 
-
-```yaml
-name: My Workflow
-on: [push, pull_request]
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Run action
-      id: summary_action
-      uses: Akshay090/github-action-style-transfer@master
-      with:
-        path: path/to/textFile.txt
-
-    - name: Check outputs
-      run: |
-         echo "Text summary: ${{ steps.summary_action.outputs.summary }}"
-```

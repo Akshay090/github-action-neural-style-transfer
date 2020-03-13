@@ -12,5 +12,5 @@ jobs:
           path: "tests/sample_image.jpg"
       - uses: actions/upload-artifact@v1
         with:
-          name: styled-image
+          name: styled_image
           path: styled_output

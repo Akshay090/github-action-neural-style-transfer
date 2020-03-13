@@ -8,3 +8,9 @@ jobs:
       - name: Self test
         id: selftest
         uses: Akshay090/github-action-neural-style-transfer@master
+        with:
+          path: "tests/sample_image.jpg"
+      - uses: actions/upload-artifact@v1
+        with:
+          name: styled-image
+          path: styled_output

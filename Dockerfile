@@ -8,6 +8,5 @@ RUN pip install pillow
 RUN pip install onnxruntime
 RUN pip install numpy
 
-
 RUN chmod +x /app/main.py
 CMD python3 /app/main.py

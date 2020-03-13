@@ -69,5 +69,6 @@ def main():
     output_directory = os.path.join(current_directory, r'styled_output/styled_image.jpg')
     output_image.save(output_directory)
 
+
 if __name__ == "__main__":
     main()

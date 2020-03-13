@@ -63,7 +63,11 @@ def main():
     image = Image.open(image_path)
     output_image = run_inference(image)
     output_image = Image.open(io.BytesIO(output_image))
-    output_image.save("styled_output/styled_image.jpg")
+
+    current_directory = os.getcwd()
+    os.mkdir('styled_output')
+    output_directory = os.path.join(current_directory, r'styled_output/styled_image.jpg')
+    output_image.save(output_directory)
 
 if __name__ == "__main__":
     main()

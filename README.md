@@ -1,4 +1,4 @@
-# GitHub Action for Neural Style Transfer on Images
+# 🔮 GitHub Action for Neural Style Transfer on Images
 
 <!-- [![Actions Status](https://github.com/Akshay090/github-action-neural-style-transfer/workflows/Lint/badge.svg)](https://github.com/Akshay090/github-action-neural-style-transfer/actions) -->
 [![Actions Status](https://github.com/Akshay090/github-action-neural-style-transfer/workflows/Integration%20Test/badge.svg)](https://github.com/Akshay090/github-action-neural-style-transfer/actions)
